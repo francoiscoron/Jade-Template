@@ -1,0 +1,24 @@
+doctype
+html
+
+    //- HEAD
+    include ../partials/head
+
+    //- Add class in body element
+    - var bodyClass = '';
+    block vars
+    body(class='#{bodyClass}')
+
+        //- Add selected class to current nav link
+        block link
+        -var menu = { 'home': 'index.html', 'blog': 'blog.html', 'contact': '/contact' };
+
+        //- HEADER
+        include ../partials/header
+
+        //- CONTENU
+
+        block content
+
+        //- FOOTER
+        include ../partials/footer
