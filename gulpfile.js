@@ -4,23 +4,25 @@ var gulp = require('gulp'),
     sass = require('gulp-ruby-sass');
 
 gulp.task('jade', function(){
-    gulp.src('templates/*.jade')
+    gulp.src('src/templates/*.jade')
         .pipe(plumber())
         .pipe(jade({pretty: true}))
-        .pipe(gulp.dest(''));
+        .pipe(gulp.dest('dist/'));
 });
 
 gulp.task('sass', function(){
-    gulp.src('stylesheets/sass/app.scss')
+    gulp.src('src/styles/app.scss')
         .pipe(plumber())
         .pipe(sass({
             sourcemapPath: '../sass',
             sourcemap: true
         }))
-        .pipe(gulp.dest('stylesheets/css'));
+        .pipe(gulp.dest('dist/css'));
 });
 
+gulp.task('default', ['jade','sass'], function(){});
+
 gulp.task('watch', ['jade','sass'], function(){
-    gulp.watch('templates/**/*.jade', ['jade'])
-    gulp.watch('stylesheets/**/*.scss', ['sass'])
+    gulp.watch('src/templates/**/*.jade', ['jade'])
+    gulp.watch('src/styles/**/*.scss', ['sass'])
 });
