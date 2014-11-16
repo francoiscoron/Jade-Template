@@ -1,0 +1,33 @@
+.l-main {
+    max-width: 50%;
+    position: absolute;
+    text-align: center;
+    left: 50%; top: 50%;
+    @include translate(-50%,-50%);
+}
+
+.main__title {
+    font-size: 3rem;
+    margin-bottom: 0;
+}
+
+.main__intro {
+    line-height: 140%;
+}
+
+.main__button {
+    display: inline-block;
+    padding:.5rem 1rem;
+    text-decoration: none;
+    background:#bbb;
+    color: #000;
+    &:before {
+        content: '';
+        background: url('../img/icons/github.svg');
+        background-size: cover;
+        vertical-align: middle;
+        display: inline-block;
+        margin-right: .5rem;
+        height: 30px; width: 30px;
+    }
+}

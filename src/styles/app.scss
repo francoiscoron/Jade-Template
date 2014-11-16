@@ -1,17 +1,9 @@
-body {
-    font-family: helvetica;
-    font-size: 16px;
-}
-.header--nav {
-    a {
-        display: inline-block;
-        padding: .5rem 1rem;
-        text-decoration: none;
-        color: #333;
-    }
+// Tools
+@import "tools/mixins",
+        "tools/config";
+// Base
+@import "base/normalize",
+        "base/base";
 
-    & a.selected {
-        background: #A0B046;
-        color: #FFF;
-    }
-}
+// Layout
+@import "layout/main";

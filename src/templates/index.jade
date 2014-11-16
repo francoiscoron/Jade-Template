@@ -1,15 +1,7 @@
-extends layouts/default
+extends layouts/main
 
-block title
- title Page d'accueil
-
-block link
-  -var selected = 'home';
-
-block vars
-  - var bodyClass = 'my-home';
-
-
-
-block content
-    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt accusamus natus, libero explicabo earum aliquid nobis a temporibus. Reiciendis ipsa cupiditate assumenda nam, consectetur nemo eligendi voluptatibus totam reprehenderit deleniti.
+block main
+  .l-main
+    h1.main__title Jade Template
+    p.main__intro  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ex laborum animi possimus rem porro atque, ab blanditiis cumque architecto aperiam quaerat tempora, autem. Nulla est provident eligendi, quae, vel veritatis.
+    a.main__button(href="https://github.com/francoiscoron/Jade-Template") Voir le dépôt
