@@ -1,10 +1,4 @@
 Jade-Template
 =============
 
-```
-$ git clone https://github.com/francoiscoron/Jade-Template.git 
-$ cd Jade-Template
-$ npm run init
-$ sudo npm intall
-$ gulp
-```
+WIP
